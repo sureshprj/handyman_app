@@ -1,0 +1,17 @@
+<div id="login-content" class="login-component flex-center" *ngIf="!loading">
+    <div class="login-box flex-center-dir-col">
+        <div class="logo-content flex-center-dir-col">
+            <img src="../../assets/Handyman.svg" alt="HandyMan" />
+            <img src="../../assets/login_flow.svg" alt="login" />
+        </div>
+        <div class="sign-in-content flex-center-dir-col">
+            <span class="login-text">Create an account or Sign in</span>
+            <button mat-raised-button class="sign-up-btn btn-login" (click)="login()">Sign Up</button>
+            <button mat-flat-button class="sign-in-btn btn-login" (click)="login()">Sign In</button>
+            <span class="login-txt-warning">The email and phone number you provide will be used for notifications</span>
+        </div>
+    </div>
+</div>
+<div *ngIf="loading" class="loading-section">
+    <mat-spinner strokeWidth="5"></mat-spinner>
+</div>

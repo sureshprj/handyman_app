@@ -1,0 +1,44 @@
+@import "../../var";
+.activity-section {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    .header {
+        @include fontNormal($size:20px, $weight: 600, $height: 30px);
+        padding: 15px 25px;
+    }
+    .search-bar-section {
+        margin: 15px 25px;
+    }
+    .body-section {
+        background-color: #E5EFF4;
+        height: 100%;
+    }
+    .activity-list {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin: 15px 25px;
+        max-height: calc(100vh - $footer-height - 102px);
+        overflow: auto;
+        .activity-card {
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: row;
+            gap: 16px;
+            background-color: #FFF;
+            border-radius: 8px;
+            padding: 8px;
+            box-sizing: border-box;
+            @include fontNormal($size:16px, $weight: 500, $color: #000);
+        }
+        .img-sec {
+            width: 48px;
+            height: 48px;
+            border-radius: 8px;
+        }
+        
+    }
+}

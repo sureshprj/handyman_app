@@ -1,1 +1,16 @@
-<p>activity works!</p>
+<div class="activity-section">
+    <div class="header">
+        Recent Activity
+    </div>
+    <div class="body-section">
+        <div class="search-bar-section">
+            <app-searchbox placeholder="What’s on your to-do list?"></app-searchbox>
+        </div>
+        <div class="activity-list">
+            <div class="activity-card" *ngFor="let card of cardList">
+                <div class="img-sec"><img [src]="card.img" alt="activity"/></div>
+                <div>{{card.txt}}</div>
+            </div>
+        </div>
+    </div>
+</div>

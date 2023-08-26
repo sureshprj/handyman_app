@@ -1,0 +1,10 @@
+@mixin fontNormal($size: 14px, $color: #111928, $weight: 400, $height: 21px, $spacing: 0px, $align: left ) {
+    font-family: 'Inter', sans-serif;
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $height;
+    letter-spacing: $spacing;
+    text-align: $align;
+    color: $color;
+  }
+$footer-height: 130px;

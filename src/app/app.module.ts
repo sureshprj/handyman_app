@@ -11,17 +11,22 @@ import { ActivityComponent } from './activity/activity.component';
 import { ProfileComponent } from './profile/profile.component';
 import { MaterialModule } from './material/material.module';
 import { AuthConfigModule } from './auth/auth-config.module';
+import { LoginComponent } from './login/login.component';
+import { SharedModule } from './shared/shared.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ActivityComponent,
-    ProfileComponent
+    ProfileComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     MaterialModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: !isDevMode(),
@@ -30,7 +35,8 @@ import { AuthConfigModule } from './auth/auth-config.module';
       registrationStrategy: 'registerWhenStable:30000'
     }),
     BrowserAnimationsModule,
-    AuthConfigModule
+    AuthConfigModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
